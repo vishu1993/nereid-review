@@ -32,13 +32,14 @@ class NereidReview(ModelSQL, ModelView):
     @classmethod
     def __setup__(cls):
         super(NereidReview, cls).__setup__()
-        cls._sql_constraints += [
-             ('valid_rating', 'CHECK (rating BETWEEN 0 AND 5)', 'invalid_rating')
-        ]
+        cls._sql_constraints += [(
+            'valid_rating',
+            'CHECK (rating BETWEEN 0 AND 5)',
+            'invalid_rating',
+        )]
         cls._error_messages = {
             'invalid_rating': 'The rating has to be on a scale of 1 to 5'
         }
-
 
     def get_party(self, name):
         """

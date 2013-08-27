@@ -7,6 +7,7 @@ import re
 import ConfigParser
 from setuptools import setup
 
+
 def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
@@ -30,20 +31,20 @@ for dep in info.get('depends', []):
 requires.append('trytond >= %s.%s, < %s.%s' %
         (major_version, minor_version, major_version, minor_version + 1))
 
-setup(name='trytond_nereid_review',
+setup(
+    name='trytond_nereid_review',
     version=info.get('version', '0.0.1'),
     description='A pluggable review app',
     author='Openlabs Technologies and Consulting (P) Ltd.',
     url='http://openlabs.co.in/',
+    download_url="https://github.com/openlabs/nereid-review",
     package_dir={'trytond.modules.nereid_review': '.'},
     packages=[
         'trytond.modules.nereid_review',
         'trytond.modules.nereid_review.tests',
     ],
     package_data={
-        'trytond.modules.nereid_review': info.get('xml', []) \
-            + ['tryton.cfg', 'locale/*.po'] \
-            + ['i18n/*.pot', 'i18n/pt_BR/LC_MESSAGES/*'],
+        'trytond.modules.nereid_review': info.get('xml', []) + ['tryton.cfg']
     },
     classifiers=[
         'Development Status :: 4 - Beta',
