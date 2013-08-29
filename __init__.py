@@ -4,7 +4,15 @@
 
     Nereid Reviews
 
-    :copyright: (c) 2012 by Openlabs Technologies & Consulting (P) Limited
+    :copyright: (c) 2012-2013 by Openlabs Technologies & Consulting (P) Limited
     :license: BSD, see LICENSE for more details.
 """
-import review
+from trytond.pool import Pool
+from .review import *
+
+
+def register():
+    Pool.register(
+        NereidReview,
+        type_="model", module="nereid_review"
+    )
