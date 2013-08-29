@@ -32,12 +32,9 @@ requires.append('trytond >= %s.%s, < %s.%s' %
 
 setup(name='trytond_nereid_review',
     version=info.get('version', '0.0.1'),
-    description=info.get('description', ''),
-    author=info.get('author', ''),
-    author_email=info.get('email', ''),
-    url=info.get('website', ''),
-    download_url="http://downloads.openlabs.co.in/" + \
-            info.get('version', '0.0.1').rsplit('.', 1)[0] + '/',
+    description='A pluggable review app',
+    author='Openlabs Technologies and Consulting (P) Ltd.',
+    url='http://openlabs.co.in/',
     package_dir={'trytond.modules.nereid_review': '.'},
     packages=[
         'trytond.modules.nereid_review',
