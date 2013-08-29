@@ -8,7 +8,7 @@
     :license: BSD, see LICENSE for more details.
 """
 from trytond.pool import Pool
-from .review import *
+from review import NereidReview
 
 
 def register():
