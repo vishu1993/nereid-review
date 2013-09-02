@@ -7,6 +7,7 @@ import re
 import ConfigParser
 from setuptools import setup
 
+
 def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
@@ -30,36 +31,32 @@ for dep in info.get('depends', []):
 requires.append('trytond >= %s.%s, < %s.%s' %
         (major_version, minor_version, major_version, minor_version + 1))
 
-setup(name='trytond_nereid_review',
+setup(
+    name='trytond_nereid_review',
     version=info.get('version', '0.0.1'),
-    description=info.get('description', ''),
-    author=info.get('author', ''),
-    author_email=info.get('email', ''),
-    url=info.get('website', ''),
-    download_url="http://downloads.openlabs.co.in/" + \
-            info.get('version', '0.0.1').rsplit('.', 1)[0] + '/',
+    description='A pluggable review app',
+    author='Openlabs Technologies and Consulting (P) Ltd.',
+    url='http://openlabs.co.in/',
+    download_url="https://github.com/openlabs/nereid-review",
     package_dir={'trytond.modules.nereid_review': '.'},
     packages=[
         'trytond.modules.nereid_review',
         'trytond.modules.nereid_review.tests',
     ],
     package_data={
-        'trytond.modules.nereid_review': info.get('xml', []) \
-            + ['tryton.cfg', 'locale/*.po'] \
-            + ['i18n/*.pot', 'i18n/pt_BR/LC_MESSAGES/*'],
+        'trytond.modules.nereid_review': info.get('xml', []) + ['tryton.cfg']
     },
     classifiers=[
         'Development Status :: 4 - Beta',
         'Environment :: Plugins',
         'Intended Audience :: Developers',
-        'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
+        'License :: OSI Approved :: BSD License',
         'Natural Language :: English',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
         'Framework :: Tryton',
         'Topic :: Office/Business',
     ],
-    license='GPL-3',
     install_requires=requires,
     zip_safe=False,
     entry_points="""
