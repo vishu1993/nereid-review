@@ -4,7 +4,7 @@
 
     Nereid Reviews
 
-    :copyright: (c) 2012-2013 by Openlabs Technologies & Consulting (P) Limited
+    :copyright: (c) 2012-2014 by Openlabs Technologies & Consulting (P) Limited
     :license: BSD, see LICENSE for more details.
 """
 from trytond.model import ModelSQL, ModelView, fields
