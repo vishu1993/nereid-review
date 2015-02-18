@@ -1,0 +1,18 @@
+nereid-review
+=============
+
+.. image:: https://travis-ci.org/openlabs/nereid-review.svg?branch=develop
+    :target: https://travis-ci.org/openlabs/nereid-review
+    :alt: Build Status
+.. image:: https://pypip.in/download/trytond_nereid_review/badge.svg
+    :target: https://pypi.python.org/pypi/trytond_nereid_review/
+    :alt: Downloads
+.. image:: https://pypip.in/version/trytond_nereid_review/badge.svg
+    :target: https://pypi.python.org/pypi/trytond_nereid_review/
+    :alt: Latest Version
+.. image:: https://pypip.in/status/trytond_nereid_review/badge.svg
+    :target: https://pypi.python.org/pypi/trytond_nereid_review/
+    :alt: Development Status
+.. image:: https://coveralls.io/repos/openlabs/nereid-review/badge.svg?branch=develop 
+    :target: https://coveralls.io/r/openlabs/nereid-review?branch=develop
+    :alt: Coveralls
